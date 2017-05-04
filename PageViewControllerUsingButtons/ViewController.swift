@@ -13,10 +13,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         self.pvc = self.childViewControllers[0] as! UIPageViewController
         self.pvc.dataSource = self
         let p = Page(num: 1, total: TOTAL)
-        pvc.setViewControllers([p], direction: .Forward, animated: false, completion: nil)
+        pvc.setViewControllers([p], direction: .forward, animated: false, completion: nil)
     }
 
-    func pageViewController(p: UIPageViewController, viewControllerAfterViewController vc: UIViewController) -> UIViewController? {
+    func pageViewController(_ p: UIPageViewController, viewControllerAfter vc: UIViewController) -> UIViewController? {
         let cur = vc as! Page
         let num = cur.num
         if num == TOTAL {
@@ -24,7 +24,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         }
         return Page(num: num+1, total: TOTAL)
     }
-    func pageViewController(p: UIPageViewController, viewControllerBeforeViewController vc: UIViewController) -> UIViewController? {
+    func pageViewController(_ p: UIPageViewController, viewControllerBefore vc: UIViewController) -> UIViewController? {
         let cur = vc as! Page
         let num = cur.num
         if num == 1 {
@@ -34,13 +34,13 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     }
     func goNextPage(_:AnyObject) {
         let cur = self.pvc.viewControllers![0]
-        let p = self.pageViewController(self.pvc, viewControllerAfterViewController: cur)
-        self.pvc.setViewControllers([p!], direction: .Forward, animated: true, completion: nil)
+        let p = self.pageViewController(self.pvc, viewControllerAfter: cur)
+        self.pvc.setViewControllers([p!], direction: .forward, animated: true, completion: nil)
     }
     func goPrevPage(_:AnyObject) {
         let cur = self.pvc.viewControllers![0]
-        let p = self.pageViewController(self.pvc, viewControllerBeforeViewController: cur)
-        self.pvc.setViewControllers([p!], direction: .Reverse, animated: true, completion: nil)
+        let p = self.pageViewController(self.pvc, viewControllerBefore: cur)
+        self.pvc.setViewControllers([p!], direction: .reverse, animated: true, completion: nil)
     }
 
 

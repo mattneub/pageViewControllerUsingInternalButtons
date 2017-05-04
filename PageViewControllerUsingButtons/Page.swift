@@ -6,8 +6,8 @@ class Page: UIViewController {
     let num : Int
     let total : Int
     @IBOutlet var lab : UILabel!
-    @IBOutlet var next : UIButton!
-    @IBOutlet var prev : UIButton!
+    @IBOutlet var nextButton : UIButton!
+    @IBOutlet var prevButton : UIButton!
 
     
     init(num:Int, total:Int) {
@@ -23,13 +23,13 @@ class Page: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.next.hidden = num == total
-        self.prev.hidden = num == 1
+        self.nextButton.isHidden = num == total
+        self.prevButton.isHidden = num == 1
         
         self.lab.text = "This is Page \(self.num)"
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // just proving that we could have used this for direct communication:
         // print(self.parentViewController!.parentViewController!)
