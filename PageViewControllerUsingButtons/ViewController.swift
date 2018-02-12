@@ -32,12 +32,12 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         }
         return Page(num: num-1, total: TOTAL)
     }
-    func goNextPage(_:AnyObject) {
+    @objc func goNextPage(_:AnyObject) {
         let cur = self.pvc.viewControllers![0]
         let p = self.pageViewController(self.pvc, viewControllerAfter: cur)
         self.pvc.setViewControllers([p!], direction: .forward, animated: true, completion: nil)
     }
-    func goPrevPage(_:AnyObject) {
+    @objc func goPrevPage(_:AnyObject) {
         let cur = self.pvc.viewControllers![0]
         let p = self.pageViewController(self.pvc, viewControllerBefore: cur)
         self.pvc.setViewControllers([p!], direction: .reverse, animated: true, completion: nil)

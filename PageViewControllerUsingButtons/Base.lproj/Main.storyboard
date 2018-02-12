@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jil-Hd-cik">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jil-Hd-cik">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,6 @@
         <scene sceneID="fST-Vp-Mex">
             <objects>
                 <viewController id="zrw-wp-aF5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="92d-4o-tKL"/>
-                        <viewControllerLayoutGuide type="bottom" id="FHa-s4-iJf"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bAe-eh-juK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,8 +29,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LKM-yp-2LU" firstAttribute="centerY" secondItem="bAe-eh-juK" secondAttribute="centerY" id="8Qf-Ac-ReU"/>
-                            <constraint firstItem="LKM-yp-2LU" firstAttribute="centerX" secondItem="bAe-eh-juK" secondAttribute="centerX" id="Juk-wQ-2IL"/>
+                            <constraint firstItem="LKM-yp-2LU" firstAttribute="centerX" secondItem="olx-c5-eSD" secondAttribute="centerX" id="Juk-wQ-2IL"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="olx-c5-eSD"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="topRated" id="DEk-k6-YfA"/>
                 </viewController>
@@ -45,10 +43,6 @@
         <scene sceneID="Tf7-6n-O1R">
             <objects>
                 <viewController id="2bL-fA-npo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jnq-UC-bXQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="i9l-ky-neG"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iBX-Bc-Rva">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,8 +57,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dsZ-q8-Lnw" firstAttribute="centerY" secondItem="iBX-Bc-Rva" secondAttribute="centerY" id="iqH-fI-EEK"/>
-                            <constraint firstItem="dsZ-q8-Lnw" firstAttribute="centerX" secondItem="iBX-Bc-Rva" secondAttribute="centerX" id="siT-Yd-scb"/>
+                            <constraint firstItem="dsZ-q8-Lnw" firstAttribute="centerX" secondItem="aFG-oS-mQ7" secondAttribute="centerX" id="siT-Yd-scb"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="aFG-oS-mQ7"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="hYZ-1r-aFi"/>
                 </viewController>
@@ -95,10 +90,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageViewControllerUsingButtons" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,11 +103,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PdL-fm-uec" secondAttribute="bottom" id="5o6-gS-qln"/>
-                            <constraint firstItem="PdL-fm-uec" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TQe-SG-U5p"/>
-                            <constraint firstAttribute="trailing" secondItem="PdL-fm-uec" secondAttribute="trailing" id="V7a-C4-5aN"/>
+                            <constraint firstItem="1RG-sk-4rW" firstAttribute="bottom" secondItem="PdL-fm-uec" secondAttribute="bottom" id="5o6-gS-qln"/>
+                            <constraint firstItem="PdL-fm-uec" firstAttribute="leading" secondItem="1RG-sk-4rW" secondAttribute="leading" id="TQe-SG-U5p"/>
+                            <constraint firstItem="1RG-sk-4rW" firstAttribute="trailing" secondItem="PdL-fm-uec" secondAttribute="trailing" id="V7a-C4-5aN"/>
                             <constraint firstItem="PdL-fm-uec" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bec-AY-xBt"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="1RG-sk-4rW"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="WEs-b1-97z"/>
                 </viewController>
