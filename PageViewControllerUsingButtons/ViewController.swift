@@ -10,7 +10,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.pvc = self.childViewControllers[0] as! UIPageViewController
+        self.pvc = self.children[0] as? UIPageViewController
         self.pvc.dataSource = self
         let p = Page(num: 1, total: TOTAL)
         pvc.setViewControllers([p], direction: .forward, animated: false, completion: nil)
